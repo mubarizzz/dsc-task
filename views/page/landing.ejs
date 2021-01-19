@@ -1,0 +1,25 @@
+<%- include ("../partials/header.ejs"); %>
+
+<div>
+    <p><a href="/view">View Users.</a></p>
+</div>
+<div>
+    <p><a href="/update">Update User.</a></p>
+</div>
+<div>
+    <form action="/delete" method="POST">
+        <button class="btn btn-danger btn-sm">Delete User</button>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1 style="margin-top: 50px;">Welcome!!</h1>
+    </div>
+    <div class="row justify-content-center">
+        <h5  style="margin-top: 50px;"><a href="/secret">Click Here.</a> for the secret page (you need to be logged in).</h5>
+    </div>
+</div>
+
+
+<%- include ("../partials/footer.ejs"); %>

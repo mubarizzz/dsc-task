@@ -1,0 +1,24 @@
+<%- include ("../partials/header.ejs"); %>
+
+
+<div class="col-12 text-center" style="margin: 100px 0 0 0;">
+    <h1>LOG IN</h1></div>
+<div class="row row-content justify-content-center" style="margin: 30px auto;">
+        
+   <div class="col-md-4">
+<form action="/login" method="POST">
+    <div class="form-group">
+        <input type="email" class="form-control" name="username" placeholder="email" required>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password" placeholder="password" required>
+    </div>
+
+    
+    <button class="btn btn-primary btn-sm btn-block">LOG IN</button>
+    <p style="text-align: center; margin-top: 8px;">Don't have an account? <a href="/register">Create An Account.</a></p>
+</form>
+</div>
+</div>
+
+<%- include ("../partials/footer.ejs"); %>

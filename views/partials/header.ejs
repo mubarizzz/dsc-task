@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecretPage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2344b9ab86.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <style>
+        body {
+          margin-top: 60px;
+          background: #f5f5f5 !important;
+          font-family: "PT Sans", sans-serif;
+          margin-bottom: 60px;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+                color: rgb(255,255,255);
+            }
+            
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* height: 60px; */
+  line-height: 60px;
+  background: transparent;
+}
+      </style>
+      
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #7e919e;">
+        <a class="navbar-brand ml-4" href="/"><i class="fa fa-user-secret fa-lg"></i> SecretPage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto mr-4">
+
+<% if(!currentUser) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt fa-lg"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register"><i class="fas fa-user-plus fa-lg"></i> Sign Up</a>
+            </li>
+
+        <% } else {%>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user fa-lg"></i> Signed in as <%= currentUser.name %> </a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt fa-lg"></i> Logout</a>
+            </li>
+        <% } %>
+
+
+          </ul>
+          </div>
+          
+        </div>
+      </nav>
+      
+    
+   <%   if(error != "") { %>
+    <div class="container" style="margin-top: 75px;">
+        <div class="alert alert-danger" role="alert"><%= error %></div>
+      </div>
+        <% } %>
+
+   <%   if(success != "") { %>
+    <div class="container" style="margin-top: 75px;">
+        <div class="alert alert-success" role="alert"><%= success %></div>
+      </div>
+        <% } %>

@@ -1,0 +1,15 @@
+<%- include ("../partials/header.ejs"); %>
+
+<div class="container">
+  <div style="margin-top: 100px;">
+  
+  <% users.forEach((user) =>{ %>
+    <div class="row mb-3"> 
+      <li><%= user.username %>- <strong><%= user.name %></strong></li>
+</div> 
+  <% }); %>
+</div>
+  
+  </div>
+
+<%- include ("../partials/footer.ejs"); %>

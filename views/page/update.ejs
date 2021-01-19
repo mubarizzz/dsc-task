@@ -1,0 +1,26 @@
+<%- include ("../partials/header.ejs"); %>
+
+
+<div class="col-12 text-center" style="margin: 100px 0 0 0;">
+    <h1>Update Name</h1></div>
+<div class="row row-content justify-content-center" style="margin: 30px auto;">
+        
+   <div class="col-md-4">
+<form action="/update" method="POST">
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" value="<%= currentUser.name %>" required>
+        
+    </div>
+
+
+    
+    <button class="btn btn-primary btn-sm btn-block">UPDATE</button>
+    
+
+</form>
+
+</div>
+</div>
+
+
+<%- include ("../partials/footer.ejs"); %>
