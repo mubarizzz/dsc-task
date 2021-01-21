@@ -12,11 +12,12 @@ const passportLocalMongoose = require('passport-local-mongoose');
 var User = require('./models/user');
 
 mongoose
-	.connect('mongodb://localhost:27017/tds', {
-		useFindAndModify: false,
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	})
+mongoose
+.connect('mongodb+srv://mubariz:mubariz@taskcluster.eqa88.mongodb.net/taskcluster?retryWrites=true&w=majority', {
+	useFindAndModify: false,
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+})
 	.then(() => console.log('Connected to DB!'))
 	.catch((error) => console.log(error.message));
 
